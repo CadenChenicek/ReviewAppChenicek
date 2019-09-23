@@ -7,10 +7,102 @@
     android:background="@color/colorAccent2"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent2"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="205dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="324dp"
+            android:layout_marginEnd="46dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/starbar" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="324dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Rating:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rate1"
+            android:layout_width="94dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="14dp"
+            android:onClick="onClick"
+            android:text="@string/rButt1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <RadioButton
+            android:id="@+id/rate2"
+            android:layout_width="94dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:onClick="onClick"
+            android:text="@string/rButt2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rate1" />
+
+        <RadioButton
+            android:id="@+id/rate3"
+            android:layout_width="94dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:onClick="onClick"
+            android:text="@string/rButt3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rate2" />
+
+        <RadioButton
+            android:id="@+id/rate4"
+            android:layout_width="94dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:onClick="onClick"
+            android:text="@string/rButt4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rate3" />
+
+        <RadioButton
+            android:id="@+id/rate5"
+            android:layout_width="94dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:onClick="onClick"
+            android:text="@string/rButt5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rate4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="413dp"
         android:layout_height="43dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="Write Your Review:"
         android:textColor="@color/colorPrimary"
@@ -18,45 +110,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="167dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="150dp"
-        android:text="Description:"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="10dp"
-        android:text="Rating:"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="377dp"
-        android:layout_height="91dp"
+        android:id="@+id/description"
+        android:layout_width="370dp"
+        android:layout_height="151dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
         android:ems="10"
         android:gravity="start|top"
@@ -64,6 +123,19 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Spinner
+        android:id="@+id/categories"
+        android:layout_width="370dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/spinnerGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

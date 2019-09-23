@@ -4,48 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent2"
     tools:context=".StartingScreen">
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="328dp" />
+        style="@style/button"
+        android:layout_width="104dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="21dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="acceptTerms"
+        android:text="Continue"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termsSwtich" />
+
+
 
     <Switch
-        android:id="@+id/switch1"
-        android:layout_width="389dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="317dp"
+        android:id="@+id/termsSwtich"
+        android:layout_width="369dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="I have read and accept the Terms and Conditions"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="410dp"
-        android:layout_height="65dp"
+        android:layout_width="411dp"
+        android:layout_height="39dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="Terms and Conditions:"
+        android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="387dp"
-        android:layout_height="63dp"
+        android:layout_width="370dp"
+        android:layout_height="93dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="12dp"
-        android:gravity="center"
-        android:text="By using this Review App you promise to make sure all information entered is true to the best of your knowledge. "
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="left"
+        android:text="By using this Review App you promise to make sure all information entered is true, we need to make things acurate. Your honesty is appreciated. "
+        android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

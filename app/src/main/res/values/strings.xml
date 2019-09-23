@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ReviewAppChenicek</string>
+    <string name="rButt1">1</string>
+    <string name="rButt2">2</string>
+    <string name="rButt3">3</string>
+    <string name="rButt4">4</string>
+    <string name="rButt5">5</string>
 </resources>
